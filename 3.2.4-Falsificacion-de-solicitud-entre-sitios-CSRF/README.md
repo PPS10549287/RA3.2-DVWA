@@ -46,6 +46,9 @@ Finalmente inspeccionamos la petición y cambiamos manualmente el `Content-Type`
 
 Tras esto envíamos la petición modificada.
 
+<img width="1086" height="163" alt="image" src="https://github.com/user-attachments/assets/f34175c4-25bc-4de5-851b-e931fec7bbbb" />
+
+
 * **Ejecución:** El servidor acepta el archivo creyendo que es una imagen.
 
 
