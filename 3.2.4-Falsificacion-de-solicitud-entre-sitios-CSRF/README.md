@@ -55,6 +55,7 @@ Tras esto envíamos la petición modificada.
 <img width="831" height="478" alt="image" src="https://github.com/user-attachments/assets/23f87e01-8ff4-4346-b03f-ce91ec077483" />
 
 
+#### RESUMEN
 | Archivo Subido | Tipo Real   | Tipo MIME Falsificado | Resultado             |
 |----------------|------------|----------------------|-----------------------|
 | shell.php      | PHP Script | image/jpeg           | Éxito (Uploaded)      |
