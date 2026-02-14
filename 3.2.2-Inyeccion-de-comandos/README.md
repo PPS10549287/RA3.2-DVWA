@@ -6,7 +6,7 @@ En este ejercicio, la aplicación solicita una dirección IP para ejecutar un co
 
 <img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/ad9b3820-a61f-47fc-a8de-34da40e326ac" />
 
-#### El desafió del Nivel Medium
+#### Desafío Nivel Medium
 A diferencia del nivel bajo, el nivel Medium intenta implementar una "lista negra" (blacklist) de caracteres peligrosos. El desarrollador utiliza funciones de sustitución en PHP para eliminar operadores que permiten encadenar comandos. Por ejemplo, el código busca bloquear:
 * **&&** (Ejecuta el segundo comando solo si el primero tiene éxito).
 * **;**  (Finaliza una instrucción y comienza otra).
