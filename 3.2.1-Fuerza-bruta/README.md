@@ -25,18 +25,18 @@ Para este ataque utilizaremos el módulo Intruder de Burp Suite:
 2. **Enviar a Intruder:** Hacemos clic derecho sobre la petición interceptada y seleccionamos `Send to Intruder`.
 <img width="1278" height="514" alt="image" src="https://github.com/user-attachments/assets/a4fa200a-cda3-4c99-9c7e-8889258fe4c3" />
 
-4. **Configurar Posiciones:** En la pestaña Positions, pulsamos **Clear** para eliminar posiciones automáticas y marcamos los valores del usuario y la contraseña como objetivos (Clic en Add sobre ambos) (`payload positions`).
+3. **Configurar Posiciones:** En la pestaña Positions, pulsamos **Clear** para eliminar posiciones automáticas y marcamos los valores del usuario y la contraseña como objetivos (Clic en Add sobre ambos) (`payload positions`).
 Visualizaremos el cuerop del POST así:
 <img width="793" height="270" alt="image" src="https://github.com/user-attachments/assets/7b390e01-6d74-4591-992e-f007fa28d9ef" />
 
-5. **Carga de Diccionarios (Payloads):** * En la pestaña Payloads, cargamos una lista de usuarios comunes para el primer campo.
+4. **Carga de Diccionarios (Payloads):** * En la pestaña Payloads, cargamos una lista de usuarios comunes para el primer campo.
   * Cargamos una lista de contraseñas (como `rockyou.txt` que viene en Kali) para el segundo o los añadimos de forma manual.
 <img width="449" height="306" alt="image" src="https://github.com/user-attachments/assets/7462ba8d-0673-48d5-8c14-d3283dc07b7c" />
 
-6. **Visualización de Configuración General:**
+5. **Visualización de Configuración General:**
 <img width="1279" height="879" alt="image" src="https://github.com/user-attachments/assets/054a52a0-1751-416c-97bd-c2003b8a9b1e" />
 
-7. **Lanzar ataque:** Pulsamos `Start Attack`.
+6. **Lanzar ataque:** Pulsamos `Start Attack`.
 
 
 #### Resultados
