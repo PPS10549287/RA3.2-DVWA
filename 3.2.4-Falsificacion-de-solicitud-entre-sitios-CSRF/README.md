@@ -22,6 +22,19 @@ Para saltar esta restricción, hemos utilizado herramientas de interceptación (
 * **Interceptación:** Al intentar subir shell.php, el servidor lo rechaza porque el Content-Type es application/x-php.
 * **Manipulación:** Se intercepta la petición y se cambia manualmente el `Content-Type` a `image/jpeg`.
 * **Ejecución:** El servidor acepta el archivo creyendo que es una imagen.
- Archivo Subido | Tipo Real            | Tipo MIME Falsificado                              | Resultado                                  |
-|-------------------|----------------------------|------------------------------------------------|---------------------------------------------------------------|
-| `shell.php`            | PHP Script        | `image/jpeg` | **Éxito(Uploaded)**       
+| Archivo Subido | Tipo Real   | Tipo MIME Falsificado | Resultado             |
+|----------------|------------|----------------------|-----------------------|
+| shell.php      | PHP Script | image/jpeg           | Éxito (Uploaded)      |
+
+#### Extracción de Información Crítica
+Una vez subida la shell, accedemos a la ruta del archivo y ejecutamos comandos mediante el parámetro `cmd`:
+* **Lectura de usuarios:** `.../uploads/shell.php?cmd=cat /etc/passwd`
+* **Ubicación:** `.../uploads/shell.php?cmd=pwd`
+
+### 3. Mitigación y Buenas Prácticas (RA3)
+Para corregir esta vulnerabilidad y asegurar una puesta en producción segura:
+* **Renombrado de archivos:** Cambiar el nombre de los archivos subidos a un hash aleatorio y eliminar la extensión original.
+* **Validación de contenido real:** No confiar en el MIME type; usar funciones que analicen el contenido real del archivo (ej. `getimagesize()` en PHP).
+* **Deshabilitar ejecución:** Configurar el servidor web para que no ejecute scripts en la carpeta de `/uploads`.
+* **Almacenamiento externo:** Guardar los archivos fuera del directorio raíz de la web o en un servicio de almacenamiento aislado.
+
