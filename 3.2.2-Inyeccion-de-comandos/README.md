@@ -47,3 +47,8 @@ Se han validado los siguientes ataques para demostrar que, a pesar del filtrado 
 
 <img width="678" height="553" alt="image" src="https://github.com/user-attachments/assets/2c93a09e-1fa1-4530-b79b-9528e5130572" />
 
+## 3. Mitigación y Buenas Prácticas
+Para corregir esta vulnerabilidad y asegurar la puesta en producción según los criterios de evaluación (RA3):
+* **Validación de entrada (Saneamiento):** Validar que la entrada sea exclusivamente una dirección IP válida mediante filtros de tipo, no listas negras.
+* **Uso de funciones seguras:** Evitar funciones como **shell_exec()** o **system()** que invocan directamente al intérprete de comandos.
+* **Principio de Menor Privilegio:** Limitar los permisos del usuario **www-data** para que no tenga acceso de lectura a archivos sensibles del sistema fuera de su entorno de trabajo.
