@@ -19,8 +19,24 @@ La validación se realiza únicamente en el lado del servidor revisando la cabec
 Para saltar esta restricción, hemos utilizado herramientas de interceptación (como **Burp Suite** o las herramientas de desarrollador del navegador):
 * **Creación del Payload:** Se creó un archivo llamado shell.php con el siguiente contenido para ejecutar comandos:
 `<?php echo shell_exec($_GET['cmd']); ?>`
+<img width="328" height="78" alt="image" src="https://github.com/user-attachments/assets/52e91ffb-02a5-4d5b-9492-34093da9c0db" />
+
 * **Interceptación:** Al intentar subir shell.php, el servidor lo rechaza porque el Content-Type es application/x-php.
-* **Manipulación:** Se intercepta la petición y se cambia manualmente el `Content-Type` a `image/jpeg`.
+<img width="578" height="216" alt="image" src="https://github.com/user-attachments/assets/1b43dc61-f983-4179-913a-004f1fb669e9" />
+
+* **Manipulación:**
+** Se abre BurpSuite y se accede a Proxy, seleccionamos la opción Open browser y una vez se abre el navegador nos dirigimos a la página web donde vamos a proceder con el ataque y preparamos nuestro archivo shell.php sin subirlo:
+<img width="578" height="216" alt="image" src="https://github.com/user-attachments/assets/ccb871de-63cf-4667-b066-16e32dcfb221" />
+** A continuación nos dirigimos a Burpsuite,habilitamos la interceptación del proxy y ahora sí puslamos Upload, veremos como Burpsuite lo ha interceptado correctamente:
+<img width="618" height="195" alt="image" src="https://github.com/user-attachments/assets/fe4214a4-896b-44b5-b46f-3e83162fe53f" />
+
+** Finalmente inspeccionamos la petición y cambiamos manualmente el `Content-Type` a `image/jpeg`.
+<img width="525" height="126" alt="image" src="https://github.com/user-attachments/assets/b36eb5f2-6872-49fa-8f8e-80fa5a5c98fb" />
+<img width="525" height="126" alt="image" src="https://github.com/user-attachments/assets/96f07df7-c0eb-4ba5-aa44-755bacc68f84" />
+
+** Tras esto envíamos la petición modificada y podremos visualizar el siguiente mensaje de validación en el navegador: 
+<img width="831" height="478" alt="image" src="https://github.com/user-attachments/assets/23f87e01-8ff4-4346-b03f-ce91ec077483" />
+
 * **Ejecución:** El servidor acepta el archivo creyendo que es una imagen.
 
 | Archivo Subido | Tipo Real   | Tipo MIME Falsificado | Resultado             |
@@ -30,7 +46,10 @@ Para saltar esta restricción, hemos utilizado herramientas de interceptación (
 #### Extracción de Información Crítica
 Una vez subida la shell, accedemos a la ruta del archivo y ejecutamos comandos mediante el parámetro `cmd`:
 * **Lectura de usuarios:** `.../uploads/shell.php?cmd=cat /etc/passwd`
+<img width="1048" height="538" alt="image" src="https://github.com/user-attachments/assets/a577b28e-1c06-4155-ba82-e1e6dc9093fc" />
+
 * **Ubicación:** `.../uploads/shell.php?cmd=pwd`
+<img width="524" height="126" alt="image" src="https://github.com/user-attachments/assets/b6ba2ad1-cac2-4e53-b3f5-ede90ec32556" />
 
 ### 3. Mitigación y Buenas Prácticas (RA3)
 Para corregir esta vulnerabilidad y asegurar una puesta en producción segura:
