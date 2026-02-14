@@ -25,7 +25,7 @@ Para saltar esta restricción, hemos utilizado herramientas de interceptación (
 <img width="578" height="216" alt="image" src="https://github.com/user-attachments/assets/1b43dc61-f983-4179-913a-004f1fb669e9" />
 
 * **Manipulación:**
-* * Se abre BurpSuite y se accede a Proxy, seleccionamos la opción Open browser y una vez se abre el navegador nos dirigimos a la página web donde vamos a proceder con el ataque y preparamos nuestro archivo shell.php sin subirlo:
+  * Se abre BurpSuite y se accede a Proxy, seleccionamos la opción Open browser y una vez se abre el navegador nos dirigimos a la página web donde vamos a proceder con el ataque y preparamos nuestro archivo shell.php sin subirlo:
 <img width="578" height="216" alt="image" src="https://github.com/user-attachments/assets/ccb871de-63cf-4667-b066-16e32dcfb221" />
 
 ** A continuación nos dirigimos a Burpsuite,habilitamos la interceptación del proxy y ahora sí puslamos Upload, veremos como Burpsuite lo ha interceptado correctamente:
