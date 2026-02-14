@@ -37,6 +37,8 @@ Se han validado los siguientes ataques para demostrar que, a pesar del filtrado 
 
 **Impacto Crítico**: El acceso al archivo **/etc/passwd** permite a un atacante conocer todos los usuarios del sistema, directorios home y shells asignadas, facilitando ataques de fuerza bruta o escalada de privilegios.
 
+#### EVIDENCIAS DE LA EJECUCIÓN DE LOS PAYLOADS
+
 <img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/c84a9aee-5530-46f0-8534-5e1687fbd79a" />
 
 <img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/88d8e362-bead-4a05-8b56-79a85a901d8d" />
