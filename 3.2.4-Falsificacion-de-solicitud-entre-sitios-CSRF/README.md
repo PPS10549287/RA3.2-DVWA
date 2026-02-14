@@ -60,7 +60,7 @@ Tras esto envíamos la petición modificada.
 |----------------|------------|----------------------|-----------------------|
 | shell.php      | PHP Script | image/jpeg           | Éxito (Uploaded)      |
 
-## Extracción de Información Crítica
+## 3. Extracción de Información Crítica
 Una vez subida la shell, accedemos a la ruta del archivo y ejecutamos comandos mediante el parámetro `cmd`:
 * **Lectura de usuarios:** `.../uploads/shell.php?cmd=cat /etc/passwd`
 <img width="1048" height="538" alt="image" src="https://github.com/user-attachments/assets/a577b28e-1c06-4155-ba82-e1e6dc9093fc" />
@@ -68,14 +68,14 @@ Una vez subida la shell, accedemos a la ruta del archivo y ejecutamos comandos m
 * **Ubicación:** `.../uploads/shell.php?cmd=pwd`
 <img width="524" height="126" alt="image" src="https://github.com/user-attachments/assets/b6ba2ad1-cac2-4e53-b3f5-ede90ec32556" />
 
-## 3. Mitigación y Buenas Prácticas (RA3)
+## 4. Mitigación y Buenas Prácticas (RA3)
 Para corregir esta vulnerabilidad y asegurar una puesta en producción segura:
 * **Renombrado de archivos:** Cambiar el nombre de los archivos subidos a un hash aleatorio y eliminar la extensión original.
 * **Validación de contenido real:** No confiar en el MIME type; usar funciones que analicen el contenido real del archivo (ej. `getimagesize()` en PHP).
 * **Deshabilitar ejecución:** Configurar el servidor web para que no ejecute scripts en la carpeta de `/uploads`.
 * **Almacenamiento externo:** Guardar los archivos fuera del directorio raíz de la web o en un servicio de almacenamiento aislado.
 
-## 4. Bibliografía
+## 5. Bibliografía
 Para el desarrollo de esta práctica y la comprensión de las vulnerabilidades en **Damn Vulnerable Web Application (DVWA)**, se han consultado las siguientes fuentes oficiales y recursos de seguridad:
 * **Digininja.** (s. f.). *GitHub digininja/DVWA: Damn Vulnerable Web Application (DVWA)*. https://github.com/digininja/DVWA.
 * **Sama, A.** (s. f.). *DVWA writeups.* https://aftabsama.com/writeups/dvwa/.
