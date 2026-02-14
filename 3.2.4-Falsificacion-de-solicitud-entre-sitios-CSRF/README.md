@@ -22,6 +22,7 @@ Para saltar esta restricción, hemos utilizado herramientas de interceptación (
 * **Interceptación:** Al intentar subir shell.php, el servidor lo rechaza porque el Content-Type es application/x-php.
 * **Manipulación:** Se intercepta la petición y se cambia manualmente el `Content-Type` a `image/jpeg`.
 * **Ejecución:** El servidor acepta el archivo creyendo que es una imagen.
+
 | Archivo Subido | Tipo Real   | Tipo MIME Falsificado | Resultado             |
 |----------------|------------|----------------------|-----------------------|
 | shell.php      | PHP Script | image/jpeg           | Éxito (Uploaded)      |
