@@ -75,3 +75,8 @@ Para corregir esta vulnerabilidad y asegurar una puesta en producción segura:
 * **Deshabilitar ejecución:** Configurar el servidor web para que no ejecute scripts en la carpeta de `/uploads`.
 * **Almacenamiento externo:** Guardar los archivos fuera del directorio raíz de la web o en un servicio de almacenamiento aislado.
 
+## 4. Bibliografía
+Para el desarrollo de esta práctica y la comprensión de las vulnerabilidades en **Damn Vulnerable Web Application (DVWA)**, se han consultado las siguientes fuentes oficiales y recursos de seguridad:
+* **Digininja.** (s. f.). *GitHub digininja/DVWA: Damn Vulnerable Web Application (DVWA)*. https://github.com/digininja/DVWA.
+* **Sama, A.** (s. f.). *DVWA writeups.* https://aftabsama.com/writeups/dvwa/.
+* **Documentación de la Unidad:** Ciberseguridad en entornos de las tecnologías de la información: Puesta en producción segura.
