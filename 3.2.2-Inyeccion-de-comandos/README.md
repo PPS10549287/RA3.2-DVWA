@@ -1,6 +1,6 @@
 # Inyección de comandos - DVWA
 
-### 1. Descripción de la Vulnerabilidad
+## 1. Descripción de la Vulnerabilidad
 La inyección de comandos sucede cuando una aplicación web transmite datos introducidos por el usuario (en este caso, una IP para un comando "**ping**") directamente al shell del S.O sin validación o filtrado suficiente.
 En este ejercicio, la aplicación solicita una dirección IP para ejecutar un comando de red estándar (**ping**).
 
@@ -20,7 +20,7 @@ Esto significa que si escribimos **127.0.0.1 && whoami**, la aplicación lo tran
 
 <img width="530" height="150" alt="image" src="https://github.com/user-attachments/assets/554e22f3-54d0-4cb6-aed3-dd3cb8c15772" />
 
-### 2. Análisis del Entorno y Explotación
+## 2. Análisis del Entorno y Explotación
 Para esta práctica, se ha configurado un entorno controlado utilizando una máquina virtual con **Kali Linux** corriendo sobre **VirtualBox**.
 
 #### Identificación de la debilidad
