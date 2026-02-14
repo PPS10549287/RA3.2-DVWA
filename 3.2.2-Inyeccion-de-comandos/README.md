@@ -63,3 +63,9 @@ Para corregir esta vulnerabilidad y asegurar la puesta en producción según los
 * **Validación de entrada (Saneamiento):** Validar que la entrada sea exclusivamente una dirección IP válida mediante filtros de tipo, no listas negras.
 * **Uso de funciones seguras:** Evitar funciones como **shell_exec()** o **system()** que invocan directamente al intérprete de comandos.
 * **Principio de Menor Privilegio:** Limitar los permisos del usuario **www-data** para que no tenga acceso de lectura a archivos sensibles del sistema fuera de su entorno de trabajo.
+
+## 4. Bibliografía
+Para el desarrollo de esta práctica y la comprensión de las vulnerabilidades en **Damn Vulnerable Web Application (DVWA)**, se han consultado las siguientes fuentes oficiales y recursos de seguridad:
+* **Digininja.** (s. f.). *GitHub digininja/DVWA: Damn Vulnerable Web Application (DVWA)*. https://github.com/digininja/DVWA.
+* **Sama, A.** (s. f.). *DVWA writeups.* https://aftabsama.com/writeups/dvwa/.
+* **Documentación de la Unidad:** Ciberseguridad en entornos de las tecnologías de la información: Puesta en producción segura.
