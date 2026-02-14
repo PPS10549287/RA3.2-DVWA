@@ -44,12 +44,13 @@ Finalmente inspeccionamos la petición y cambiamos manualmente el `Content-Type`
 <img width="525" height="126" alt="image" src="https://github.com/user-attachments/assets/96f07df7-c0eb-4ba5-aa44-755bacc68f84" />
 
 
-Tras esto envíamos la petición modificada y podremos visualizar el siguiente mensaje de validación en el navegador: 
+Tras esto envíamos la petición modificada.
+
+* **Ejecución:** El servidor acepta el archivo creyendo que es una imagen.
 
 
 <img width="831" height="478" alt="image" src="https://github.com/user-attachments/assets/23f87e01-8ff4-4346-b03f-ce91ec077483" />
 
-* **Ejecución:** El servidor acepta el archivo creyendo que es una imagen.
 
 | Archivo Subido | Tipo Real   | Tipo MIME Falsificado | Resultado             |
 |----------------|------------|----------------------|-----------------------|
