@@ -1,6 +1,6 @@
 # Falsificación de solicitud entre sitios (CSRF) - DVWA
 
-### 1. Descripción de la Vulnerabilidad
+## 1. Descripción de la Vulnerabilidad
 La vulnerabilidad de subida de archivos (File Upload) ocurre cuando una aplicación permite a un usuario cargar archivos al servidor sin validar correctamente su contenido, extensión o tipo MIME. Esto puede permitir a un atacante subir scripts maliciosos (como una Web Shell) para ejecutar código de forma remota (RCE).
 
 
@@ -9,7 +9,7 @@ En este nivel, la aplicación implementa una restricción basada en el MIME type
 * El archivo sea una imagen (ej. `image/jpeg` o `image/png`).
 * El tamaño no exceda un límite establecido.
 
-### 2. Análisis del Entorno y Explotación
+## 2. Análisis del Entorno y Explotación
 Práctica realizada en un entorno controlado con **Kali Linux** y **VirtualBox**.
 
 #### Identificación de la debilidad
@@ -68,7 +68,7 @@ Una vez subida la shell, accedemos a la ruta del archivo y ejecutamos comandos m
 * **Ubicación:** `.../uploads/shell.php?cmd=pwd`
 <img width="524" height="126" alt="image" src="https://github.com/user-attachments/assets/b6ba2ad1-cac2-4e53-b3f5-ede90ec32556" />
 
-### 3. Mitigación y Buenas Prácticas (RA3)
+## 3. Mitigación y Buenas Prácticas (RA3)
 Para corregir esta vulnerabilidad y asegurar una puesta en producción segura:
 * **Renombrado de archivos:** Cambiar el nombre de los archivos subidos a un hash aleatorio y eliminar la extensión original.
 * **Validación de contenido real:** No confiar en el MIME type; usar funciones que analicen el contenido real del archivo (ej. `getimagesize()` en PHP).
