@@ -26,16 +26,23 @@ Para saltar esta restricción, hemos utilizado herramientas de interceptación (
 
 * **Manipulación:**
   * Se abre BurpSuite y se accede a Proxy, seleccionamos la opción Open browser y una vez se abre el navegador nos dirigimos a la página web donde vamos a proceder con el ataque y preparamos nuestro archivo shell.php sin subirlo:
+
 <img width="578" height="216" alt="image" src="https://github.com/user-attachments/assets/ccb871de-63cf-4667-b066-16e32dcfb221" />
 
-** A continuación nos dirigimos a Burpsuite,habilitamos la interceptación del proxy y ahora sí puslamos Upload, veremos como Burpsuite lo ha interceptado correctamente:
+  * A continuación nos dirigimos a Burpsuite,habilitamos la interceptación del proxy y ahora sí puslamos Upload, veremos como Burpsuite lo ha interceptado correctamente:
+
 <img width="618" height="195" alt="image" src="https://github.com/user-attachments/assets/fe4214a4-896b-44b5-b46f-3e83162fe53f" />
 
-** Finalmente inspeccionamos la petición y cambiamos manualmente el `Content-Type` a `image/jpeg`.
+  * Finalmente inspeccionamos la petición y cambiamos manualmente el `Content-Type` a `image/jpeg`.
+
 <img width="525" height="126" alt="image" src="https://github.com/user-attachments/assets/b36eb5f2-6872-49fa-8f8e-80fa5a5c98fb" />
+
+
 <img width="525" height="126" alt="image" src="https://github.com/user-attachments/assets/96f07df7-c0eb-4ba5-aa44-755bacc68f84" />
 
-** Tras esto envíamos la petición modificada y podremos visualizar el siguiente mensaje de validación en el navegador: 
+  * Tras esto envíamos la petición modificada y podremos visualizar el siguiente mensaje de validación en el navegador: 
+
+
 <img width="831" height="478" alt="image" src="https://github.com/user-attachments/assets/23f87e01-8ff4-4346-b03f-ce91ec077483" />
 
 * **Ejecución:** El servidor acepta el archivo creyendo que es una imagen.
